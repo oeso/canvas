@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>My Canvas</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="description" content="Let's make canvas">
+    <style type="text/css">
+        *{margin:0;padding:0}
+        .containsTrajecOptim{position:relative;}
+        .curve, .animation {left: 0;position: absolute;top: 0;}
+        .curve {z-index: 1;}
+        .test li{display:block;padding:5px 0;}
+        .test li .input{border:1px solid #000;}
+        .test li a{border:1px solid #000;text-align:center;padding:5px;margin:0 auto;}
+    </style>
+    <script defer src="oes-canvas.js"></script>
+</head>
+<body>
+    <canvas id="can"></canvas>
+
+    <div>
+        <div id="trajecOptim" class="containsTrajecOptim">
+            <img ng-src="{{bgImg}}" width="{{imageWidth}}" height="{{imageHeight}}"/>
+            <canvas class="curve" id="line"></canvas>
+            <canvas class="curve" id="sideLine"></canvas>
+            <canvas class="curve" id="box"></canvas>
+            <canvas class="curve" id="curveAllShadow"></canvas>
+            <canvas class="curve" id="curveSelectedshadow"></canvas>
+            <canvas class="curve" id="curveAll"></canvas>
+            <canvas class="curve" id="curveSelected"></canvas>
+            <canvas class="animation"></canvas>
+        </div>
+        <div>
+            <ul class="test">
+                <li>club:<input type="text" ng-model="club" class="input"/></li>
+                <li>angle:<input type="text" ng-model="ball_angle" class="input"/></li>
+                <li>speed:<input type="text" ng-model="ball_speed" class="input"/></li>
+                <li>angle:<input type="text" ng-model="direction_angle" class="input"/></li>
+                <li>backspin:<input type="text" ng-model="spin_back" class="input"/></li>
+                <li>sidespin:<input type="text" ng-model="spin_side" class="input"/></li>
+                <li>carry:<input type="text" ng-model="carry" class="input"/></li>
+                <li>distance:<input type="text" ng-model="distance" class="input"/></li>
+                <li><a ng-click="infoOk();">적용</a></li>
+                <li><a ng-click="cameraChange();">조감도 변경</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
